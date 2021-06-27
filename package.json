@@ -1,0 +1,28 @@
+{
+  "name": "img2icon",
+  "version": "1.0.0",
+  "description": "将图片转化成base64 icon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supwjm/img2icon.git"
+  },
+  "keywords": [
+    "将图片转化成base64",
+    "icon"
+  ],
+  "author": "wujianming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supwjm/img2icon/issues"
+  },
+  "homepage": "https://github.com/supwjm/img2icon#readme",
+  "dependencies": {
+    "globby": "^11.0.4",
+    "img-convert-to-base64": "^1.0.1",
+    "nunjucks": "^3.2.3"
+  }
+}

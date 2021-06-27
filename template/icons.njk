@@ -1,0 +1,15 @@
+.icon-img {
+  width: 30rpx;
+  height: 30rpx;
+  background-size: 30rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+{% for file in aFiles %}
+.icon-{{file.fileName}} {
+  background-image: url("{{path}}/{{file.fileName}}.{{file.exe}}");
+}
+{% endfor %}

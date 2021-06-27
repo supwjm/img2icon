@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>icons预览demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li { list-style: none; }
+
+        .explain {
+            padding: 20px;
+            background: #ecddb19c;
+        }
+        .explain dd { padding-left: 10px; margin-top: 10px; }
+
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .item {
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            width:150px;
+            height:150px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+            border: 1px solid #999;
+        }
+        .icon-img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+<body>
+    <div>
+        <dl class="explain">
+            <dt><strong>使用说明:</strong></dt>
+            <dd>1、&lt;text clas="icon-img icon-xxx"&gt;&lt;/text&gt;</dd>
+            <dd>2、icon-img是固定的类名，必填</dd>
+            <dd>3、icon-xxx xxx是对应svg文件的文件名</dd>
+            <dd>4、通过width、height、backgroun-size调整大小</dd>
+            <dd>5、小程序中不支持调颜色</dd>
+            <dd>6、将svg文件添加到images/icons目录下，运行npm run svg2icont 会生成相应icons.scss和demo.html </dd>
+        </dl>
+    </div>
+    <ul class="wrap">
+        {% for file in aFiles %}
+            <li class="item">
+                <p>
+                    <img class="icon-img icon-{{file.fileName}}" src="{{oUrls[file.fulPath]}}"> <span class="icon-img icon-{{file.fileName}}"></span><br/>
+                    <span>icon-{{file.fileName}}</sapn>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
