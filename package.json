@@ -1,6 +1,6 @@
 {
   "name": "img2icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将图片转化成base64 icon",
   "main": "index.js",
   "scripts": {
